@@ -1,9 +1,11 @@
 import "./App.css";
+import TimerPage from "./TimerPage/TimerPage";
+import "./sass/styles.scss";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="heading-primary">Timer App</h1>
+    <div className="app">
+      <TimerPage />
     </div>
   );
 }

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //defines what 1rem is
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9/16
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8/16
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12/16
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background: #1f2328;
+  box-shadow: -20px 20px 60px #1a1e22, 20px -20px 60px #24282e;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}

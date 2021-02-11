@@ -1,0 +1,42 @@
+.timer-page {
+  &__time-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  &__btn-wrapper2 {
+    position: relative;
+    margin-left: 5rem;
+  }
+}
+
+.play-btn {
+  position: absolute;
+}
+.header-secondary {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: $color-white;
+  margin-top: 15rem;
+}
+
+.header-primary {
+  font-size: 8rem;
+  letter-spacing: 3.2px;
+  font-weight: 100;
+  text-align: center;
+  color: $color-white;
+  border-radius: 50px;
+  padding: 2rem;
+  margin: 5rem auto;
+  background: #1f2328;
+  box-shadow: 5px 5px 10px #1a1e22, -5px -5px 10px #24282e;
+}
