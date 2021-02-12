@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import "../sass/styles.scss";
 import StopBtn from "../svg/StopBtn.svg";
 import PlayBtn from "../svg/PlayBtn.svg";
@@ -20,21 +20,23 @@ function TimerPage(props) {
 
   return (
     <div className="timer-page">
-      <h2 className="header-secondary">Stopwatch</h2>
-      <span className="timer-page__time-wrapper">
-        <h1 className="header-primary">{formatTime(timer)}</h1>
-      </span>
+      <h2 className="timer-page__header">Stopwatch</h2>
+      <div className="stop-shaking">
+        <div className="timer-page__time-wrapper">
+          <h1 className="timer-page__time">{formatTime(timer)}</h1>
+        </div>
+      </div>
+
       <div className="timer-page__btns">
-        <span className="timer-page__btn-wrapper1">
-          <img
-            className="stop-btn"
-            onClick={handleReset}
-            src={StopBtn}
-            alt="stop"
-            disabled={!isActive}
-          />
-        </span>
-        <span className="timer-page__btn-wrapper2">
+        <img
+          className="stop-btn"
+          onClick={handleReset}
+          src={StopBtn}
+          alt="stop"
+          disabled={!isActive}
+        />
+
+        <div className="timer-page__btn-wrapper2">
           {!isActive && !isPaused ? (
             <img
               className="play-btn"
@@ -51,13 +53,13 @@ function TimerPage(props) {
             />
           ) : (
             <img
-              className="pause-btn"
+              className="resume-btn"
               onClick={handleResume}
               src={ResumeBtn}
               alt="resume"
             />
           )}
-        </span>
+        </div>
       </div>
     </div>
   );
