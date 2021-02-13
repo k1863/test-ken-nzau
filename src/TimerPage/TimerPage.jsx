@@ -6,6 +6,8 @@ import ResumeBtn from "../svg/ResumeBtn.svg";
 import PauseBtn from "../svg/PauseBtn.svg";
 import useTimer from "../utils/useTimer.js";
 import { formatTime } from "../utils/utils.js";
+import Particles from "react-particles-js";
+import { params } from "./particlesParams";
 
 function TimerPage(props) {
   const {
@@ -20,6 +22,7 @@ function TimerPage(props) {
 
   return (
     <div className="timer-page">
+      <Particles params={params} />
       <h2 className="timer-page__header">Stopwatch</h2>
       <div className="stop-shaking">
         <div className="timer-page__time-wrapper">
@@ -39,7 +42,7 @@ function TimerPage(props) {
         <div className="timer-page__btn-wrapper2">
           {!isActive && !isPaused ? (
             <img
-              className="play-btn"
+              className="play-btn stroke-solid"
               onClick={handleStart}
               src={PlayBtn}
               alt="stop"

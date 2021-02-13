@@ -1,14 +1,19 @@
 .timer-page {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 
   &__time-wrapper {
     border-radius: 50px;
-    background: #1f2328;
-    box-shadow: 5px 5px 10px #1a1e22, -5px -5px 10px #24282e;
-    width: 45rem;
+    background: rgb(23, 23, 24);
+    max-width: 50rem;
     margin: 5rem auto;
-    padding-left: 2rem;
+    padding-left: 3rem;
+
+    @include respond(phone) {
+      border-radius: 20px;
+      max-width: 30rem;
+    }
   }
 
   & h1 {
@@ -16,6 +21,10 @@
     letter-spacing: 3.2px;
     font-weight: 100;
     color: $color-white;
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
   &__header {
     font-size: 4rem;
@@ -24,6 +33,9 @@
     text-align: center;
     color: $color-white;
     margin-top: 15rem;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__btns {
@@ -37,6 +49,22 @@
   }
 }
 
+.play-btn {
+  &:hover {
+    .stroke-solid {
+      opacity: 1;
+      stroke-dashoffset: 300;
+    }
+  }
+}
+
 .stop-btn {
   cursor: pointer;
+  margin-right: 10rem;
+}
+
+#tsparticles {
+  position: absolute !important;
+  width: 100vw;
+  height: 100vh;
 }
