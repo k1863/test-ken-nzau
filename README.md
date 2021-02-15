@@ -5,7 +5,7 @@ Stopwatch App made with React.
 ## Live App
 
 Live App:
-<a href="https://gratitude-app-mern-stack.herokuapp.com/">View Live</a>
+<a href="https://test-ken-nzau-7nsypmz6l.vercel.app/">View Live</a>
 
 ## Installation
 
@@ -38,5 +38,3 @@ Click play
 
 - [ReactJs](#reactjs)
 - [Sass](#sass)
-
-What are you grateful for today?

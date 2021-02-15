@@ -42,7 +42,7 @@ function TimerPage(props) {
         <div className="timer-page__btn-wrapper2">
           {!isActive && !isPaused ? (
             <img
-              className="play-btn stroke-solid"
+              className="play-btn"
               onClick={handleStart}
               src={PlayBtn}
               alt="stop"
